@@ -71,28 +71,30 @@ function generatePassword() {
   console.log(passElements.promptlength);
 
   if (passElements.promptlength >= 8 && passElements.promptlength <= 128) {
-    var lowerLetters = window.confirm("Would you care for lowercase letters?");
+    var lowerLetters = window.confirm(
+      "Would you care to include lowercase letters?"
+    );
     if (lowerLetters) {
       passElements.emptyArray = passElements.emptyArray.concat(
         passElements.lowercaseLi
       );
     }
     var uppercaseLetters = window.confirm(
-      "Would you care for uppercase letters?"
+      "Would you care to include uppercase letters?"
     );
     if (uppercaseLetters) {
       passElements.emptyArray = passElements.emptyArray.concat(
         passElements.uppercaseLi
       );
     }
-    var numFigures = window.confirm("Would you care for some letters?");
+    var numFigures = window.confirm("Would you care to include some numbers?");
     if (numFigures) {
       passElements.emptyArray = passElements.emptyArray.concat(
         passElements.numLi
       );
     }
     var specialCharacters = window.confirm(
-      "Would you like to use some SPECIAL characters?"
+      "Would you care to include some SPECIAL characters?"
     );
     if (specialCharacters) {
       passElements.emptyArray = passElements.emptyArray.concat(
